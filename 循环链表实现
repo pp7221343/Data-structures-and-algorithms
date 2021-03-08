@@ -1,0 +1,76 @@
+public class Queue {
+    private int[] data = null;
+    private int head;
+    private int tail;
+    private int size;
+
+    Queue(int k){
+        this.data = new int [k];
+        this.head = -1;
+        this.tail = -1;
+        this.size = k;
+    }
+
+    public boolean isEmpty(){
+       return head == -1;
+    }
+
+    public boolean isFull(){
+        return tail-head == size -1;
+    }
+
+    //获取队首元素
+    public int Front(){
+        if(isEmpty()){
+            return -1;
+        }
+        return data[head];
+    }
+
+    //获取队尾元素
+    public int Real(){
+        if(isEmpty()){
+            return -1;
+        }
+        return data[tail];
+    }
+
+    //队尾插入一个元素
+    public boolean enQueue(int value){
+        if(isFull()){
+            return false;
+        }
+        if(head == -1){
+            head = 0;
+            tail = 0;
+            data[tail] = value;
+            return true;
+        }
+        tail = (tail+1)%size;
+        data[tail] = value;
+        return true;
+
+
+    }
+
+    //队头删除一个元素
+    public boolean deQueue(){
+        if(isEmpty()){
+            return false;
+        }
+        if(head == tail){
+            head = -1;
+            tail = -1;
+            return true;
+        }
+        head = (head+1)%size;
+        return true;
+    }
+
+    public String toString(){
+        System.out.println(Arrays.toString(data));
+        System.out.println("head:"+head);
+        System.out.println("tail:"+tail);
+        System.out.println("size:"+size);
+        return null;
+    }
