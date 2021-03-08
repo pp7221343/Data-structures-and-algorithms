@@ -1,3 +1,5 @@
+基础的循环队列实现，类中使用基本数组类型存储数据，实现了新增，删除，判断为空，判断是否已满，获取队列首数据，以及获取队列尾数据
+
 public class Queue {
     private int[] data = null;
     private int head;
