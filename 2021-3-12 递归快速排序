@@ -1,0 +1,37 @@
+package com.wms.demo.struct;
+
+public class QuickSort {
+
+public void sort(int[] arr, int low,int high){
+    if(arr.length <= 1){
+        return;
+    }
+    if(low < high){
+        int temp = arr[low];
+        int l = low;
+        int r = high;
+        while(l<r){
+            while(l<r&&temp < arr[r]){
+                r--;
+            }
+            if(l<r){
+                arr[l] = arr[r];
+                l++;
+            }
+
+            while(l<r && temp > arr[l]){
+                l++;
+            }
+            if(l<r){
+                arr[r] = arr[l];
+                r++;
+            }
+        }
+        arr[l] = temp;
+        sort(arr,low,l-1);
+        sort(arr,l+1,high);
+    }
+
+
+}
+}
