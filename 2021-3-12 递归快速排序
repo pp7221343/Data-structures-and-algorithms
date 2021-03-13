@@ -35,3 +35,10 @@ public void sort(int[] arr, int low,int high){
 
 }
 }
+
+时间复杂度：O（nlogn）
+    n=选择基准数
+    logn=每次比较数量
+空间复杂度：O（n）
+
+最差情况：O（n*n）：倒叙数组
