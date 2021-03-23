@@ -2,7 +2,7 @@
 数据结构
 
 # 2021-3-24
-* [二分查找]()
+* [二分查找](https://github.com/pp7221343/Data-structures-and-algorithms/blob/main/2021-3-24-%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE.md)
 
 # 2021-3-23
 * [找到旋转数组中的最小值](https://github.com/pp7221343/Data-structures-and-algorithms/blob/main/2021-3-23-%E5%AF%BB%E6%89%BE%E6%97%8B%E8%BD%AC%E6%95%B0%E7%BB%84%E6%9C%80%E5%B0%8F%E5%80%BC.md)
