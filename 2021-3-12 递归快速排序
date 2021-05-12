@@ -14,18 +14,18 @@ public void sort(int[] arr, int low,int high){
             while(l<r&&temp < arr[r]){
                 r--;
             }
-            if(l<r){
-                arr[l] = arr[r];
-                l++;
-            }
+            
+            arr[l] = arr[r];
+                
+            
 
             while(l<r && temp > arr[l]){
                 l++;
             }
-            if(l<r){
-                arr[r] = arr[l];
-                r++;
-            }
+            
+            arr[r] = arr[l];
+                
+            
         }
         arr[l] = temp;
         sort(arr,low,l-1);
